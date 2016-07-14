@@ -10,7 +10,7 @@ O intuito deste tutorial é ser um guia rápido para ajudar na familiarização 
 
 Na ilustração acima, temos:
 
-1. Linha preta é a branch de referência, nomeada de master.
+1. Linha preta é a branch de referência (normalmente é a master).
 2. AC criou uma branch (verde) e fez um commit, partindo do commit inicial.
 3. Em paralelo, Fábio criou outra branch (azul).
 4. Fábio e AC seguiram commitando paralelamente, até que AC integrou o seu trabalho de volta à master.

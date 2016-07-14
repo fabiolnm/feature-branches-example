@@ -44,16 +44,16 @@ Normalmente uma branch parte da master, mas nada impede que haja uma sub-branch 
 git checkout -b nova_branch
 ```
 
-### Integrar a branch de volta para a master
+#### Integrar a branch de volta para a master
 
 Existem dois caminhos
  1. Visual, com cliques de botão, usando os Pull Requests do Github
-  1.1. Vantagens: simples, intuitivo, facilita verificações de CI e Code Climate integradas ao Github, facilita code reviews (ferramenta de diff e de comentários integradas)
-  1.2. Desvantagem: ruim pra quem prefere trabalhar apenas na linha de comando, ou não vê necessidade de fazer code review.
+  1. Vantagens: simples, intuitivo, facilita verificações de CI e Code Climate integradas ao Github, facilita code reviews (ferramenta de diff e de comentários integradas)
+  2. Desvantagem: ruim pra quem prefere trabalhar apenas na linha de comando, ou não vê necessidade de fazer code review.
  2. Linha de comando: a tela de Pull Requests do Github fornece os comandos para fazer merge sem precisar criar um PR.
 
-#### Abordagem Visual
-1. Toda vez que se faz push pro github, ele oferece a opção de criar um Pull Request referente àquela branch
+##### Abordagem Visual
+1. Toda vez que se faz push pro github, ele oferece a opção de criar um Pull Request referente àquela branch.<br>
 2. Colocar um título (será a 'commit message' do pull request) e uma explicação (por exemplo, sumarizando o que foi feito na branch, explicando determinadas decisões de projeto, solicitando review, etc).
 3. Se estiver ok, o botão de merge estará habilitado. Simples assim.
 4. Se houver conflitos, o botão de merge estará desabilitado, para resolução do conflito, que deverá ser feito na linha de comando e editando os arquivos para resolver os conflitos:
@@ -75,7 +75,7 @@ git commit                # efetiva o merge
 git push                  # envia para o Github. O botão de 'Merge Pull Request' estará habilitado.
 ```
 
-#### Abordagem com linha de comando pura
+##### Abordagem com linha de comando pura
 
 O que o botão de merge do github faz é um merge com a flag ```--no-ff``` para integrar a branch de volta à branch de origem:
 

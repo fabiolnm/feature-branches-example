@@ -62,7 +62,7 @@ Existem dois caminhos
 git checkout master
 git pull                  # traz as versão mais recente da master para a maquina
 git checkout minha_branch
-git merge master          # junta as branches, porém o merge não é concluído enquanto houver conflitos
+git merge master          # traz a master para minha_branch, porém o merge não é concluído enquanto houver conflitos
 git status                # evidencia arquivos com conflito
 
 edita e corrige os arquivos com conflito
@@ -76,3 +76,16 @@ git push                  # envia para o Github. O botão de 'Merge Pull Request
 ```
 
 #### Abordagem com linha de comando pura
+
+O que o botão de merge do github faz é um merge com a flag ```--no-ff``` para integrar a branch de volta à branch de origem:
+
+```
+git checkout master
+git pull                        # traz as versão mais recente da master para a maquina
+git checkout minha_branch
+git merge master                # traz a master para minha_branch
+
+git checkout master             # volta para a master
+git merge --no-ff minha_branch  # integra minha_branch na master
+git push                        # envia para o github
+```

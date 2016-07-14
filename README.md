@@ -1,10 +1,10 @@
-## Tutorial de Feature Branches
+# Tutorial de Feature Branches
 
-A facilidade de utilização de feature branches no Git é provavelmente o grande trunfo que faz desta ferramenta superior aos seus concorrentes (CVS, Subversion, Mercurial para dar alguns exemplos). 
+A facilidade de utilização de feature branches no Git é provavelmente o grande trunfo que faz desta ferramenta superior aos seus concorrentes (CVS, Subversion, Mercurial para dar alguns exemplos).
 
 O intuito deste tutorial é ser um guia rápido para ajudar na familiarização do que seria um uso recomendado de feature branches.
 
-### Um exemplo prático
+## Um exemplo prático
 
 <img width="300" alt="exemplo" src="https://github.com/fabiolnm/feature-branches-example/blob/tutorial/images/grafico_de_rede.png?raw=true">
 
@@ -20,7 +20,7 @@ Na ilustração acima, temos:
  1. Primeiro, Fábio traz as atualizações da master para a sua branch
  2. Em seguida, Fábio integra a sua branch para a master.
 
-### Usando todo o poder do Github para o trabalho em times de desenvolvimento
+## Usando todo o poder do Github para o trabalho em times de desenvolvimento
 
 O Github fornece ferramentas fantásticas:
 
@@ -29,14 +29,16 @@ O Github fornece ferramentas fantásticas:
 2. Diálogo de merge dá indicações se:
  * Não houver conflitos
  * Os testes estiverem passando no CI
- * O código novo possui falhas de segurança ou violações de qualidade segundo a análise do Code Climate. <img width="500" alt="exemplo" src="https://github.com/fabiolnm/feature-branches-example/blob/tutorial/images/ferramentas_de_integracao_continua_integradas_no_pull_request.png?raw=true">
-3. Incentiva a prática de code reviews, pois 
+ * O código novo possui falhas de segurança ou violações de qualidade segundo a análise do Code Climate.<br>
+ <img width="500" alt="exemplo" src="https://github.com/fabiolnm/feature-branches-example/blob/tutorial/images/ferramentas_de_integracao_continua_integradas_no_pull_request.png?raw=true">
+3. Incentiva a prática de code reviews, pois
   * a ferramenta de PRs é integrada com a diff da branch
-  * possui suporte built-in a comentários diretamente em cada linha de código. <img width="500" alt="exemplo" src="https://github.com/fabiolnm/feature-branches-example/blob/tutorial/images/ferramentas_de_diff_e_review.png?raw=true">
+  * possui suporte built-in a comentários diretamente em cada linha de código.<br>
+  <img width="500" alt="exemplo" src="https://github.com/fabiolnm/feature-branches-example/blob/tutorial/images/ferramentas_de_diff_e_review.png?raw=true">
 
-### Comandos
+## Comandos
 
-#### Criar nova branch
+### Criar nova branch
 
 Normalmente uma branch parte da master, mas nada impede que haja uma sub-branch de uma branch.
 
@@ -44,7 +46,7 @@ Normalmente uma branch parte da master, mas nada impede que haja uma sub-branch 
 git checkout -b nova_branch
 ```
 
-#### Integrar a branch de volta para a master
+### Integrar a branch de volta para a master
 
 Existem dois caminhos
  1. Visual, com cliques de botão, usando os Pull Requests do Github
@@ -52,11 +54,15 @@ Existem dois caminhos
   2. Desvantagem: ruim pra quem prefere trabalhar apenas na linha de comando, ou não vê necessidade de fazer code review.
  2. Linha de comando: a tela de Pull Requests do Github fornece os comandos para fazer merge sem precisar criar um PR.
 
-##### Abordagem Visual
+#### Abordagem Visual
 1. Toda vez que se faz push pro github, ele oferece a opção de criar um Pull Request referente àquela branch.<br>
-2. Colocar um título (será a 'commit message' do pull request) e uma explicação (por exemplo, sumarizando o que foi feito na branch, explicando determinadas decisões de projeto, solicitando review, etc).
-3. Se estiver ok, o botão de merge estará habilitado. Simples assim.
-4. Se houver conflitos, o botão de merge estará desabilitado, para resolução do conflito, que deverá ser feito na linha de comando e editando os arquivos para resolver os conflitos:
+<img width="500" alt="exemplo" src="https://github.com/fabiolnm/feature-branches-example/blob/tutorial/images/new_pull_request.png?raw=true">
+2. Colocar um título (será a 'commit message' do pull request) e uma explicação (por exemplo, sumarizando o que foi feito na branch, explicando determinadas decisões de projeto, solicitando review, etc).<br>
+<img width="500" alt="exemplo" src="https://github.com/fabiolnm/feature-branches-example/blob/tutorial/images/create_pull_request.png?raw=true">
+3. Se estiver ok, o botão de merge estará habilitado. Simples assim.<br>
+<img width="500" alt="exemplo" src="https://github.com/fabiolnm/feature-branches-example/blob/tutorial/images/green_pull_request.png?raw=true">
+4. Se houver conflitos, o botão de merge estará desabilitado, para resolução do conflito, que deverá ser feito na linha de comando e editando os arquivos para resolver os conflitos:<br>
+<img width="500" alt="exemplo" src="https://github.com/fabiolnm/feature-branches-example/blob/tutorial/images/ferramentas_de_integracao_continua_integradas_no_pull_request.png?raw=true">
 
 ```
 git checkout master
@@ -75,7 +81,7 @@ git commit                # efetiva o merge
 git push                  # envia para o Github. O botão de 'Merge Pull Request' estará habilitado.
 ```
 
-##### Abordagem com linha de comando pura
+#### Abordagem com linha de comando pura
 
 O que o botão de merge do github faz é um merge com a flag ```--no-ff``` para integrar a branch de volta à branch de origem:
 

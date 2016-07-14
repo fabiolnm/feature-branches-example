@@ -61,8 +61,10 @@ Existem dois caminhos
 <img width="500" alt="exemplo" src="https://github.com/fabiolnm/feature-branches-example/blob/tutorial/images/create_pull_request.png?raw=true">
 3. Se estiver ok, o botão de merge estará habilitado. Simples assim.<br>
 <img width="500" alt="exemplo" src="https://github.com/fabiolnm/feature-branches-example/blob/tutorial/images/green_pull_request.png?raw=true">
-4. Se houver conflitos, o botão de merge estará desabilitado, para resolução do conflito, que deverá ser feito na linha de comando e editando os arquivos para resolver os conflitos:<br>
+4. Se houver conflitos, o botão de merge estará desabilitado, para resolução do conflito:<br>
 <img width="500" alt="exemplo" src="https://github.com/fabiolnm/feature-branches-example/blob/tutorial/images/ferramentas_de_integracao_continua_integradas_no_pull_request.png?raw=true">
+
+A resolução de conflitos que deverá ser feita na linha de comando e editando os arquivos para resolver os conflitos:
 
 ```
 git checkout master

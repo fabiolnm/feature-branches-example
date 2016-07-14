@@ -17,8 +17,8 @@ Na ilustração acima, temos:
 5. Alfa cria uma nova branch (roxa), partindo deste ponto (após AC integrar).
 6. AC inicia uma nova feature, em uma nova branch (amarela)
 7. Fábio termina seu trabalho na branch azul e precisa integrar na master.
- 7.1. Primeiro, Fábio traz as atualizações da master para a sua branch
- 7.2. Em seguida, Fábio integra a sua branch para a master.
+ 1. Primeiro, Fábio traz as atualizações da master para a sua branch
+ 2. Em seguida, Fábio integra a sua branch para a master.
 
 ### Usando todo o poder do Github para o trabalho em times de desenvolvimento
 
